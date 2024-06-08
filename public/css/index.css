@@ -4,6 +4,17 @@
     gap: 10px;
 }
 
+.title a {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px;
+}
+
 .table {
     width: 100%;
     border-collapse: collapse;
@@ -40,13 +51,4 @@
     margin-bottom: 20px;
 }
 
-a {
-    padding: 10px 20px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 3px;
-    color: #fff;
-    cursor: pointer;
-    text-decoration: none;
-    margin: 10px;
-}
+
