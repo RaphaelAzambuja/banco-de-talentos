@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class CurriculumController extends Controller
 {
-    public function create()
+    public function index()
     {
-        return view('curriculum.create');
+
     }
 
     public function store(Request $request)
@@ -31,11 +31,5 @@ class CurriculumController extends Controller
         Curriculum::create($validatedData);
 
         return redirect()->route('curriculum.index');
-    }
-
-    public function index()
-    {
-        $curriculums = Curriculum::all();
-        return view('curriculum.index', compact('curriculums'));
     }
 }
