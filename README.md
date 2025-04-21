@@ -1,48 +1,59 @@
-## Banco de Talentos
+# 🚀 API de Talentos
 
-Esta é uma aplicação para gerenciamento de currículos. Permite aos usuários enviar seus currículos através de um formulário e visualizá-los posteriormente em uma lista.
+API REST desenvolvida em Laravel, feita para simular uma seção de "trabalhe conosco".
 
-Pré-requisitos
+---
 
-Antes de começar, certifique-se de ter instalado em sua máquina:
+## 📚 Sumário
 
-- PHP
-- Composer
+- [🚀 Sobre](#sobre)
+- [🛠️ Tecnologias](#tecnologias)
+- [📦 Instalação](#instalação)
+<!-- - [⚙️ Uso](#uso)
+- [🧪 Testes](#testes)
+- [📫 Contato](#contato) -->
 
-Instalação
+---
 
-1. Clone este repositório para o seu ambiente de desenvolvimento:
-    
-    git clone https://github.com/RaphaelAzambuja/banco-de-talentos
-    
-2. Navegue até o diretório do projeto:
-    
-    cd banco-de-talentos
-    
-3. Instale as dependências do Composer:
-    
-    composer install
-    
-4. Copie o arquivo .env.example e renomeie-o para .env:
-    
-    cp .env.example .env
-    
-5. Gere uma chave de aplicativo Laravel:
-    
-    php artisan key
-    
-6. Configure o banco de dados no arquivo .env, incluindo o tipo de banco de dados, nome do banco de dados, usuário e senha.
-7. Execute as migrações do banco de dados para criar as tabelas necessárias:
-    
-    php artisan migrate
-    
-8. Inicie o servidor de desenvolvimento:
-    
-    php artisan serve
-    
-9. Acesse o aplicativo em seu navegador no endereço http://localhost:8000.
+## 🚀 Sobre
 
-Uso
+Esta API fornece endpoints para:
 
-- Os usuários podem acessar a página de envio de currículos em /curriculums/create.
-- Os currículos enviados são armazenados no banco de dados e podem ser visualizados na página principal em /curriculums.
+- Cadastro e autenticação de usuários
+- Cadastro de currículos
+- Filtros e buscas avançadas
+- Envio de e-mails 
+
+---
+
+## 🛠️ Tecnologias
+
+- [Laravel](https://laravel.com/)
+- PostgreSQL
+- Laravel Sail (Biblioteca que abstrai o docker)
+- JWT para autenticação
+- [Pest](https://pestphp.com/) para testes
+
+---
+
+## 📦 Instalação
+
+```bash
+# Clone o repositório
+git clone https://github.com/seuusuario/sua-api.git
+
+# Copie e configure o .env
+cp .env.example .env
+# edite DB_CONNECTION, DB_DATABASE, DB_USERNAME, etc.
+
+# Suba o ambiente com Sail
+./vendor/bin/sail up -d
+
+# Instale as dependências
+./vendor/bin/sail composer install
+
+# Gere a chave da aplicação
+./vendor/bin/sail artisan key:generate
+
+# Rode as migrações
+./vendor/bin/sail artisan migrate
